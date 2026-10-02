@@ -1,0 +1,110 @@
+{
+  "project_name": "Silent Hiking Indonesia",
+  "brand_tagline": "Walk Slowly. Be Present. Feel More.",
+  "archetype": "ORGANIC & EARTHY",
+  "app_type": "hybrid_fullstack",
+  "tech_stack": {
+    "frontend": "React.js (JavaScript - .js/.jsx files)",
+    "styling": "Tailwind CSS + Lucide Icons + Framer Motion",
+    "components": "Shadcn/UI primitives in src/components/ui (customized for brand)",
+    "backend": "FastAPI (Python)"
+  },
+  "typography": {
+    "display_font": "Playfair Display, Cormorant Garamond, or serif font stack for headlines (font-serif)",
+    "body_font": "Plus Jakarta Sans, DM Sans, or Inter (font-sans)",
+    "mono_font": "JetBrains Mono or Courier Prime for booking codes & receipt reference IDs (font-mono)",
+    "heading_styles": {
+      "h1_hero": "font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight text-[#1C1C1A] dark:text-[#F5F0E8]",
+      "h2_section": "font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#1C1C1A] dark:text-[#F5F0E8]",
+      "h3_card": "font-serif text-xl sm:text-2xl font-medium text-[#1C1C1A] dark:text-[#F5F0E8]",
+      "overline_label": "font-sans text-xs tracking-[0.25em] uppercase font-semibold text-[#2D4A3E] dark:text-[#A3B899]"
+    },
+    "guidelines": "DO NOT use Inter or generic sans for display headings. Main headlines MUST use serif. Use uppercase tracking for overlines and buttons."
+  },
+  "colors": {
+    "background_light": "#F5F0E8",
+    "background_card_light": "#EDE8DC",
+    "background_card_alt": "#F9F6F0",
+    "foreground_dark": "#1C1C1A",
+    "primary_evergreen": "#2D4A3E",
+    "primary_hover": "#213A31",
+    "primary_foreground": "#F5F0E8",
+    "accent_moss": "#6B7144",
+    "accent_earth_warm": "#8B6B4A",
+    "border_subtle": "#D4CCB8",
+    "muted_foreground": "#68645E",
+    "admin_dashboard": {
+      "sidebar_bg": "#1C1C1A",
+      "sidebar_fg": "#F5F0E8",
+      "sidebar_active": "#2D4A3E",
+      "content_bg": "#F5F0E8",
+      "card_bg": "#FFFFFF",
+      "card_border": "#D4CCB8",
+      "status_paid": { "bg": "#E8F0EC", "text": "#2D4A3E", "border": "#A8C5B5" },
+      "status_pending": { "bg": "#FFF8E6", "text": "#8B6B4A", "border": "#E6D0A8" },
+      "status_failed": { "bg": "#FDF2F2", "text": "#9E2A2B", "border": "#F3B8B8" }
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "p-4, p-6, p-8, p-12, p-16, py-24, py-32 (2x-3x generous spacing philosophy)",
+    "container": "max-w-7xl mx-auto px-6 sm:px-8 md:px-16",
+    "grid_modes": {
+      "trips_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "apparel_grid": "grid grid-cols-2 md:grid-cols-4 gap-6",
+      "dashboard_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    }
+  },
+  "key_features_design_requirements": {
+    "landing_page": {
+      "hero": "Misty forest photo background with semi-transparent overlay (bg-black/35), high contrast white/stone headline 'A Quieter Place For A Brighter You', CTAs 'Daftar Sekarang' and 'Jelajahi Pengalaman'.",
+      "philosophy": "2-column layout with 'More Than A Hike' headline, 4 feature blocks (Mindful Experience, Small & Curated max 15, Beginner Friendly, Intentional Journey).",
+      "quote_break": "Full width 60vh image section with italic serif quote 'In silence, we begin to hear what matters.'",
+      "upcoming_trips": "Trip cards showing photo, badge (Easy/Moderate), price in IDR, date, location (e.g., Gunung Salak, Hutan Sentul, Taman Nasional Halimun), duration, available slots left (max 15).",
+      "why_silence": "Interactive or editorial breakdown with forest photography grid.",
+      "shop_teaser": "4 apparel preview cards with quick add hover button and price.",
+      "testimonials": "Mindful community quote slider/tabs with photo thumbnails.",
+      "journal": "Featured story + 3 story cards with category badges and read time.",
+      "special_programs": "Dark contrast section (#1C1C1A background) for corporate & private silent hiking programs.",
+      "faq_accordion": "Clean border-b accordion items for quick questions."
+    },
+    "trip_booking_flow": {
+      "schedule_selection": "Interactive date/schedule picker showing slots left (max 15 capacity per schedule). Clear warning badge when slots are low (<3 left).",
+      "customization_step": "Mandatory selection of T-shirt size (XS, S, M, L, XL, XXL) and Drink Bonus choice (Kopi Susu Forest or Cokelat Hangat).",
+      "payment_step": "Support for Manual Transfer with proof upload (preview thumbnail + bank details copy button) AND Payment Gateway option.",
+      "invoice_confirmation": "Printable/downloadable booking confirmation invoice with unique booking code, schedule details, shirt size, drink bonus, and status badge."
+    },
+    "apparel_shop": {
+      "customization": "Color swatch pickers, size selector (XS-XXL), quantity adjuster, size guide modal, and Add to Cart / Buy Now actions.",
+      "order_report": "Admin apparel order summary report generator with size aggregation breakdown."
+    },
+    "admin_dashboard": {
+      "header_and_sidebar": "Earthy dark sidebar (#1C1C1A) with active state in Forest Green (#2D4A3E). Clean header with search, notifications, admin profile, and quick actions.",
+      "tabs": ["Overview Stats", "Manage Trips", "Manage Bookings", "Apparel Catalog", "Blog / Journal", "Reviews & Ratings", "Payment Settings", "Admin Users & Roles", "Apparel Report"],
+      "booking_management": "Table with filtering by status (Paid, Pending, Cancelled), quick edit modal for participant info, payment verification, and automatic 'Print Invoice' button.",
+      "reviews_management": "Reviews tied directly to verified trip bookings to prevent fake reviews.",
+      "apparel_report_printing": "Dedicated print-friendly view for apparel orders aggregated by item, size, and total quantity."
+    }
+  },
+  "image_urls": {
+    "hero_misty_forest": "https://images.unsplash.com/photo-1758438919146-f3f59a6d2544?w=1800&h=1000&fit=crop&auto=format",
+    "forest_trail_quote": "https://images.unsplash.com/photo-1465652044861-81e32c824058?w=1200&h=800&fit=crop&auto=format",
+    "trip_salak": "https://images.unsplash.com/photo-1762770665765-de232b512652?w=900&h=1200&fit=crop&auto=format",
+    "trip_sentul": "https://images.unsplash.com/photo-1784732350314-3aca04d860b0?w=900&h=1200&fit=crop&auto=format",
+    "trip_halimun": "https://images.unsplash.com/photo-1768345755011-78c9abc4cb72?w=900&h=1200&fit=crop&auto=format",
+    "trip_gede": "https://images.unsplash.com/photo-1565138146061-e29b079736c0?w=900&h=1200&fit=crop&auto=format",
+    "apparel_trail_tee": "https://images.unsplash.com/photo-1540486674504-91e3ad500c52?w=900&h=1200&fit=crop&auto=format",
+    "apparel_windbreaker": "https://images.unsplash.com/photo-1612178012526-dcc3024fb9b8?w=900&h=1100&fit=crop&auto=format",
+    "apparel_cap": "https://images.unsplash.com/photo-1763713441168-8d2fb207955f?w=900&h=700&fit=crop&auto=format",
+    "apparel_jacket": "https://images.unsplash.com/photo-1548883354-d056ab7b441f?w=900&h=1100&fit=crop&auto=format",
+    "coffee_bonus": "https://images.unsplash.com/photo-1606802431282-2ef616ec09de?w=600&h=600&fit=crop&auto=format",
+    "journal_mindfulness": "https://images.unsplash.com/photo-1713634438631-754fe8a8dc0c?w=1200&h=800&fit=crop&auto=format",
+    "journal_forest": "https://images.unsplash.com/photo-1640950824507-6d5a34cfb7ef?w=900&h=700&fit=crop&auto=format",
+    "special_programs_bg": "https://images.unsplash.com/photo-1763713437177-d3cf82444b96?w=1200&h=800&fit=crop&auto=format"
+  },
+  "general_ui_ux_guidelines": {
+    "data_testid": "MANDATORY. Every interactive element (buttons, links, inputs, tabs, dropdowns, status badges, modals) MUST include a unique kebab-case `data-testid` attribute (e.g. data-testid='trip-booking-button', data-testid='admin-booking-row-1', data-testid='size-select-m').",
+    "component_use": "Use Shadcn/UI React components in src/components/ui for form controls, dialogs, dropdowns, tabs, and tables. Use custom Tailwind layouts for marketing and detail pages.",
+    "notifications": "Use Sonner (`import { toast } from 'sonner'`) for user feedback on booking creation, payment upload, cart additions, and admin actions.",
+    "hover_and_transitions": "Explicit hover states with color transitions (`transition-colors duration-200`). Always pair hover background changes with explicit text color definitions."
+  }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sh-bone: #F5F0E8;
+  --sh-forest: #2D4A3E;
+  --sh-charcoal: #1C1C1A;
+}
+
+body {
+  margin: 0;
+  background-color: #F5F0E8;
+  color: #1C1C1A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #2D4A3E;
+  color: #F5F0E8;
+}
+
+.font-serif { font-family: 'Playfair Display', serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.overline {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* subtle entrance */
+@keyframes sh-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.sh-reveal { animation: sh-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@layer base {
+  :root {
+    --background: 40 33% 93%;
+    --foreground: 60 4% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 4% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 4% 11%;
+    --primary: 152 25% 23%;
+    --primary-foreground: 40 33% 93%;
+    --secondary: 40 25% 88%;
+    --secondary-foreground: 60 4% 11%;
+    --muted: 40 20% 88%;
+    --muted-foreground: 40 4% 40%;
+    --accent: 68 24% 36%;
+    --accent-foreground: 40 33% 93%;
+    --destructive: 0 72% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 20% 78%;
+    --input: 42 20% 78%;
+    --ring: 152 25% 23%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}
